@@ -23,49 +23,49 @@ StudyMate is a beginner-friendly educational web app powered by **NVIDIA Nemotro
 2. Clone this repository and open its folder.
 3. Install dependencies:
 
-   \`\`\`bash
+   ```bash
    pip install -r requirements.txt
-   \`\`\`
+   ```
 
 4. Create a Nebius Token Factory API key in the Nebius console.
 5. Set the key as an environment variable. On Windows PowerShell:
 
-   \`\`\`powershell
+   ```powershell
    $env:NEBIUS_API_KEY="your-key-here"
-   \`\`\`
+   ```
 
 6. Start the app:
 
-   \`\`\`bash
+   ```bash
    streamlit run app.py
-   \`\`\`
+   ```
 
 The app uses these defaults:
 
-- API base URL: \`https://api.tokenfactory.nebius.com/v1/\`
-- Model: \`nvidia/Nemotron-3_5-Lightning\`
+- API base URL: `https://api.tokenfactory.nebius.com/v1/`
+- Model: `nvidia/Nemotron-3_5-Lightning`
 
-You can override them with \`NEBIUS_BASE_URL\` and \`NEBIUS_MODEL\`. Check the model catalog in your Nebius account to confirm that your API key has access to the selected model.
+You can override them with `NEBIUS_BASE_URL` and `NEBIUS_MODEL`. Check the model catalog in your Nebius account to confirm that your API key has access to the selected model.
 
 ## Deploy on Streamlit Community Cloud
 
 1. Sign in to [Streamlit Community Cloud](https://share.streamlit.io/) with GitHub.
-2. Create an app from this repository and select \`app.py\` as the entry point.
+2. Create an app from this repository and select `app.py` as the entry point.
 3. In the app's **Settings → Secrets**, add:
 
-   \`\`\`toml
+   ```toml
    NEBIUS_API_KEY = "your-key-here"
-   \`\`\`
+   ```
 
-4. Deploy. Do not commit API keys, \`.env\` files, or Streamlit secrets to GitHub.
+4. Deploy. Do not commit API keys, `.env` files, or Streamlit secrets to GitHub.
 
 ## Tests
 
 Run:
 
-\`\`\`bash
+```bash
 pytest -q
-\`\`\`
+```
 
 ## Important limitations
 
